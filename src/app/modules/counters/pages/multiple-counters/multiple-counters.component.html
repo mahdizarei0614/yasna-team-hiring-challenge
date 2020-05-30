@@ -1,0 +1,23 @@
+<div class="page-container">
+  <app-header title="Multiple Counters"></app-header>
+  <div id="container" class="container content-wrap">
+    <div id="add-section" class="section">
+      <div class="add-counter">
+        <input id="new-counter" class="input" placeholder="Counter Step..." (keypress)="numberOnly($event)" type="text"
+               (focusin)="inputFocusIn()" (focusout)="inputFocusOut()" pattern="[\d]+">
+        <div class="button" (click)="addCounter()">Add Counter</div>
+      </div>
+      <div class="add-hint">This only accepts integers and floating points(except Zero).</div>
+    </div>
+    <div id="counters-section" class="section">
+      <div class="counter-block" *ngFor="let c of counters; index as i">
+        <div class="counter-header">Step: {{c.step}}</div>
+        <div class="counter-body">
+          <div class="counter-number">{{c.counter}}</div>
+          <div class="counter-run-button" (click)="runClick(i)">Run</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

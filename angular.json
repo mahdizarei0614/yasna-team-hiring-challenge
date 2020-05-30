@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "yasna-team-hiring-challenge"
+    }
+  },
+  "defaultProject": "yasna-team-hiring-challenge",
+  "cli": {
+    "analytics": "2dd36155-d607-4290-a15f-673720bbf0d4"
+  }
 }
